@@ -8,4 +8,9 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    content: [
+        "./resources/**/*.blade.php",
+        "./resources/**/*.js",
+        "./resources/**/*.vue",
+      ],
 });
