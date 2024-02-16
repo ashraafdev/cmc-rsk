@@ -10,11 +10,11 @@
   
     </div>
     <div class="w-full px-3">
-      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-date">
+      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"  for="grid-date">
         Date
       </label>
-      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-date" type="date" value="{{now()}}" placeholder="">
-  
+      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-date" type="date" value="{{date('d/m/y')}}" lang="en" placeholder="">
+  {{ date('d/m/y')}}
     </div>
     <div class="w-full px-3">
       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-titre">
@@ -45,9 +45,14 @@
   
     </div>
     <div class=" ml-[80%] mt-5">
-      <button class="shadow w-40 bg-blue-500 hover:bg-blue-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded " type="button">
+      <button class="shadow w-40 bg-blue-500 hover:bg-blue-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded "  onclick="print_()" ="button">
         Submit
       </button>
     </div>
   </div>
 </form>
+<script>
+    function print_(){
+        window.print();
+    }
+</script>
