@@ -1,7 +1,5 @@
 <?php
 
-use App\Http\Controllers\Controller;
-use App\Livewire\File;
 use App\Livewire\HomePage;
 use Illuminate\Support\Facades\Route;
 
@@ -17,7 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', HomePage::class);
-Route::get('/file', File::class);
-Route::view('/template',"welcome" );
-
-Route::get("/print", [Controller::class, "exportPDF"]);
+Route::view('/template',"welcome");
