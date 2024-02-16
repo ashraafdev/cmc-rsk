@@ -9,7 +9,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800;900&family=Gelasio&family=Inter:wght@100;900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400;500;600;700;800;900&family=Protest+Strike&family=Roboto:wght@100;300;500&family=Rubik&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
 </head>
+<script>
+        var doc = new jsPDF();
+        var specialElementHandlers = {
+
+'#editor': function (element, renderer) {
+
+return true;
+
+}
+
+};
+
+$('#generatePDF').click(function () {
+
+doc.fromHTML($('#htmlContent').html(), 15, 15, {
+
+'width': 700,
+
+'elementHandlers': specialElementHandlers
+
+});
+
+doc.save(‘sample_file.pdf’);
+
+});
+</script>
 <body>
 <div class="template">
 

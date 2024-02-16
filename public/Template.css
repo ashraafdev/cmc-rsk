@@ -11,7 +11,7 @@
 
 
 .template{
-    width: 47vw;
+    width: 700px;
     height: 100vh;
     background-image: url("Sans.jpeg");
     background-size: contain;
@@ -22,13 +22,13 @@
 #ref{
     position: absolute;
     top: 5vh;
-    right: 4vw;
+    right: 70px;
 }
 
 #date{
     position:absolute;
     top: 20%;
-    right: 4vw;
+    right: 70px;
 }
 
 #title{
@@ -42,7 +42,7 @@
 #text{
     position: absolute;
     top: 44%;
-    width: calc( 100% - 10vw );
+    width: calc( 100% - 180px );
     text-align: justify;
     left: 50%;
     transform: translateX(-50%);
@@ -54,7 +54,7 @@
 
 
 #sighanture{
-    right: 8vw;
+    right: 120px;
     bottom: 10%;
     position: absolute;
     text-align: justify;
@@ -65,7 +65,7 @@
 {
     position: absolute;
     top: 35%;
-    left: 4vw;
+    left: 70px;
     width: 80%;
     font-family: "Montserrat", sans-serif !important;
     word-break: break-all;
