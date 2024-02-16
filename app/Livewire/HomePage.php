@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\App;
 use Livewire\Component;
 
@@ -21,12 +22,24 @@ class HomePage extends Component
 
     public function savePdf()
     {
-        dd($this->ref, $this->date, $this->title, $this->object, $this->body, $this->signature);
+        /* //dd($this->ref, $this->date, $this->title, $this->object, $this->body, $this->signature);
 
-        $pdf = App::make('dompdf.wrapper');
-        $pdf->loadHTML('<h1>Test</h1>');
-        return response()->streamDownload(function () use ($pdf) {
+        $pdf = PDF::loadView('welcome', []);
+
+        // You can customize the PDF options if needed
+        // For example:
+        // $pdf->setPaper('A4', 'landscape');
+
+        return $pdf->download('example.pdf');
+       /*  return response()->streamDownload(function () use ($pdf) {
             echo $pdf->stream();
-        }, 'name.pdf');
+        }, 'name.pdf'); */ 
+
+        session()->flash('status', 'Post successfully updated.');
+        session()->flash('status', 'Post successfully updated.');
+        session()->flash('status', 'Post successfully updated.');
+        session()->flash('status', 'Post successfully updated.');
+ 
+        $this->redirect('/file');
     }
 }
